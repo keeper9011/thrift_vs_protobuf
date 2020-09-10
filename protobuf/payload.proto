@@ -1,0 +1,18 @@
+syntax = "proto3";
+package protobufmodel;
+
+option go_package = "./protobufmodel";
+
+message SimpleStruct {
+	int32						int32Value = 1;
+	string						stringValue = 2;
+	bool						boolValue = 3;
+}
+
+message Payload {
+	bytes						byteArray = 1;
+	repeated int64				int64Array = 2;
+	repeated string				stringArray = 3;
+	repeated SimpleStruct		structArray = 4;
+	map<int32, SimpleStruct>	intStructMap = 5;
+}

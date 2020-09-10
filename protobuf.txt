@@ -1,0 +1,17 @@
+goos: windows
+goarch: amd64
+pkg: thrift_vs_protobuf
+BenchmarkSerializeProtobuf/none-12 	  923204	      1516 ns/op
+BenchmarkSerializeProtobuf/small-12         	  214387	      5107 ns/op
+BenchmarkSerializeProtobuf/medium-12        	   56869	     23245 ns/op
+BenchmarkSerializeProtobuf/large-12         	    3870	    346754 ns/op
+BenchmarkSerializeProtobuf/huge-12          	      46	  26217430 ns/op
+BenchmarkDeserializeProtobuf/none-12        	 1568820	       779 ns/op
+BenchmarkDeserializeProtobuf/small-12       	  266715	      5132 ns/op
+BenchmarkDeserializeProtobuf/medium-12      	   31744	     39441 ns/op
+BenchmarkDeserializeProtobuf/large-12       	    2181	    594230 ns/op
+BenchmarkDeserializeProtobuf/huge-12        	      31	  38096571 ns/op
+PASS
+ok  	thrift_vs_protobuf	146.489s
+?   	thrift_vs_protobuf/protobuf/protobufmodel	[no test files]
+?   	thrift_vs_protobuf/thrift/thriftmodel	[no test files]
